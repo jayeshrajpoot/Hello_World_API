@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello World API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <h1>Hello World API</h1>
+    <h2> Click on the below buttons to get the message in respective language</h2>
+    <button id="englishBtn">English</button>
+    <button id="frenchBtn">French</button>
+    <button id="hindiBtn">Hindi</button>
+    <p id="result"></p>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
