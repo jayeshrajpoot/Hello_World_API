@@ -1,5 +1,5 @@
 # 📌 Hello_World_API
-## Coding Round 2 _**The Hello World API Assignment**_
+## Coding Round 2 _**The Hello World API Assignment**_ for Ignite Solution Campus Recruitment
 ### This is a simple REST API that returns a greeting message in the specified language.
 ### Let's clear some basics first!
 <details>
@@ -174,3 +174,4 @@ If we change the language to English it'll display the "Hello World" message in 
 #### Testing the endpoint on French language parameter
 ![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/3f6ddd9b-1d03-47f4-8062-d5666041853a)
 
+##### If you get any error while following these steps you can refer the official AWS documentation 
