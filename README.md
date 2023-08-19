@@ -112,4 +112,57 @@ The response will be a JSON object with the following structure:
 4. After clicking on **Hindi** button
 ![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/94c0f396-f20e-42eb-b668-7f3a4c0dabe1)
 
+## Task C: Making use of AWS Lambda and AWS API Gateway to invoke a API endpoint and testing it using POSTMAN  
+<details>
+    <summary>AWS Lambda</summary>
+    AWS Lambda is a serverless computing service that allows you to run code without provisioning or managing servers. Lambda functions can be triggered by events, such as HTTP requests, database changes, or file uploads.
+</details>
+    <details>
+    <summary>AWS API Gateway</summary>
+    AWS API Gateway is a fully managed service that makes it easy to create, publish, maintain, monitor, and secure APIs. API Gateway can be used to expose your Lambda functions to the public or to other AWS services.
+</details>
+<details>
+    <summary>POSTMAN</summary>
+    POSTMAN is a popular API development and testing tool. POSTMAN allows you to send HTTP requests to APIs, view the response, and debug errors.
+</details>
 
+## Steps to Integrate AWS Lambda and API Gateway to invoke an endpoint 
+##### Step 1) Create a AWS Lambda function (choose Python X.X as environment)
+![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/d1555cf0-8426-4129-9198-d12c36920408)
+
+##### Step 2) Add trigger as API Gateway
+![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/8e077d45-d250-4b81-96e7-6fe02965b743)
+
+##### Step 3) Write the function code in lambda_function.py file
+![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/bfe1a359-9006-4ae1-bfe7-aefe12c9e1a3)
+
+##### Step 4) Edit the Runtime settings 
+![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/32a2a408-1426-4cfc-887f-d3ac0b9cd1c4)
+
+##### Step 5) Click on Deploy to save the changes in the lambda_function.py file
+##### Step 6) Click on Configure test event 
+![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/3bcdfe3a-df6f-4d7c-b413-b0f279a66e79)
+
+##### Step 7) Give the event name and provide the EventJson where queryStringParameters is an object and "language" : "English" is key value pair
+![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/b1ac422b-5c5d-45f0-90db-222a720b76bc)
+
+##### Step 8) Click on Save and Invoke and view the Execution reults
+![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/727f396b-c1b0-4188-880b-d6f2b42e3730)
+
+##### Step 9) Create a REST API using AWS API Gateway service
+![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/c3fb2c53-b16e-4b49-8c8b-b0de736c1309)
+
+##### Step 10) Create Resource from Actions dropdown and in resource Create Method GET
+![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/fd70c727-dd37-406e-8d1e-9db64aaecc18)
+
+##### Step 11) Click on Deploy API and select stage as dev
+![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/5bb16688-5452-4312-98be-098fe1e57c3a)
+
+##### Step 12) A new Invoke URL will be provided by API Gateway
+![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/9c2d5de9-8fb2-4cd2-b281-4556a73aa748)
+
+#### Step 13) Edit the Invoke URL and in front of stage name add /hello?language=Hindi
+![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/31623908-4dcc-48d9-b2a5-e6786bb78355)
+
+#### Endpoint URL : https://hinysx6mjh.execute-api.us-east-1.amazonaws.com/dev/hello?language=Hindi
+### Test the endpoint using POSTMAN
