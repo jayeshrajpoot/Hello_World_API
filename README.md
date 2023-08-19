@@ -163,7 +163,7 @@ The response will be a JSON object with the following structure:
 
 #### Step 13) Edit the Invoke URL and in front of stage name add /hello?language=Hindi
 ![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/31623908-4dcc-48d9-b2a5-e6786bb78355)
-
+If we change the language to English it'll display the "Hello World" message in English language and same for French language
 #### Endpoint URL : https://hinysx6mjh.execute-api.us-east-1.amazonaws.com/dev/hello?language=Hindi
 
 ### Test the endpoint using POSTMAN
