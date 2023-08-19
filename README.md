@@ -39,5 +39,5 @@ Before you begin, ensure you have the following tools installed:
     python app.py
 ```
 2. Open your web browser and go to http://localhost:5000 The page should look like this
-![localhostImg] (image.png)
+![Alt localhostImg] (Hello_world_API/image.png)
 
