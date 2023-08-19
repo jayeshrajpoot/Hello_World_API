@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: A sample 'Hello World' API document
+  description: >
+    # documentation for 'Hello World' API 
+  version: "1.0"
+  
+paths:
+  /hello:
+    get:
+      tags:
+        - Hello World
+      summary:
+        Get a hello world message in a language of your choice
+      description:
+        Get a hello world message in a language of your choice
+      parameters:
+        - in: query
+          name: language
+          required: true
+          schema:
+            type: string
+            enum:
+              - French
+              - English
+              - Hindi
+          description: The language of the response
+          example: Hindi
+      responses:
+        200:
+          description: A hello world message in the requested language
+          content:
+            "application/json":
+              schema:
+                properties:
+                  message:
+                    $ref: "#/components/schemas/MessageSummary"
+        400:
+          $ref: "#/components/responses/BadRequest"
+
+
+components:
+  responses:
+    BadRequest:
+      description: There was an error in the request.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+
+  schemas:
+    Error:
+      type: object
+      properties:
+        error_message:
+          type: string
+          description: A descriptive error message
+          example: The requested language is not supported
+    MessageSummary:
+      type: object
+      properties:
+        ID:
+          type: string
+          description: The ID of the message. Any alphanumeric string can be returned.
+          example: "A123456789"        
+        msgText:
+          type: string
+          description: The Hello World message in the requested language
+          enum:
+            - Bonjour le monde
+            - Hello world
+            - Namastey sansar
+
+          
+
+
