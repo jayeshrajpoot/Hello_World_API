@@ -15,6 +15,15 @@ A GET request is a HTTP request that is used to retrieve data from a server. The
     <summary>What is a query parameter?</summary>
     A query parameter is a piece of information that is appended to the URL of a web request. The language query parameter in this API is used to specify the language of the greeting message.
 </details>
+The code in hello_world.py defines a simple Flask application that exposes a single REST GET endpoint at /hello. The endpoint takes a query parameter called language and returns a greeting message in the specified language. The following table shows the supported languages and their corresponding greeting messages:
+
+
+| Language |    Greeting message |
+|----------|   ------------------|
+| English  |    Hello world      |
+| French   |    Bonjour le monde | 
+| Hindi	   |    Namastey sansar  |
+
 
 
 ## Task A : Implementation of API on Local Machine
@@ -68,19 +77,18 @@ The language parameter should be set to the language of the greeting message you
 
 http://localhost:5000/hello?language=French
 
-
 To use a REST client, you can use the following request:
 
 GET http://localhost:5000/hello?language=English
 
-
 The response will be a JSON object with the following structure:
-
 {
 "message": "Hello world"
 }
 </details>
+
 2. Open your web browser and go to http://localhost:5000 The page should look like this
+![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/a78411d9-ae2c-408f-b31c-bf0f3b35f6d5)
 
 
 3. Now to test the API click on the address and edit it. According to the respective language and click enter 
@@ -89,18 +97,19 @@ The response will be a JSON object with the following structure:
 4. Now a Hello World message will be displayed on the Client Browser 
 ![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/63c8bbd1-048a-4207-b5b9-6fdf73138d13)
 
+6. To get the _"Hello World"_ message in **French** and **Hindi** language we just need to change the language parameter to French and Hindi
 # Task B : Through Web Page allow the user to choose a language and call the API
 
-1. Click on all the buttons one by one and you should able to see the respective message for respective languages
+1. Click on all the buttons one by one and you should able to view the **"Hello World"** message in corresponding languages
 ![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/7e945047-101e-4ba4-8ada-02957e8a6f69)
 
-2. For English
+2. After clicking on **English** button
 ![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/33411b8b-aeb9-49b9-a5c2-42cc1ec942c4)
 
-3. For French
+3. After clicking on **French** button
 ![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/eb5c6650-0095-4434-962e-cc160f3a6584)
 
-4. For Hindi
+4. After clicking on **Hindi** button
 ![image](https://github.com/jayeshrajpoot/Hello_World_API/assets/53878260/94c0f396-f20e-42eb-b668-7f3a4c0dabe1)
 
 
